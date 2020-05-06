@@ -1,9 +1,13 @@
-let tweets = [];
+import Axios from "axios";
 
-export function getTweets() {
-  return tweets;
+let apiUrl = "https://itc-bootcamp-19-dot-charcha-dev.appspot.com/tweet";
+
+export async function getTweets() {
+  let response = await Axios.get(apiUrl);
+  return response;
 }
 
-export function addTweet(tweet) {
-  tweets.unshift(tweet);
+export async function addTweet(tweet) {
+  let response = await Axios.post(apiUrl, {tweet});
+  return response;
 }

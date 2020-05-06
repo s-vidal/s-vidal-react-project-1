@@ -1,10 +1,11 @@
-/* html {
-  background-color: black;
-} */
-
-.input-height {
-  min-height: 200px;
+.background-black {
+  background-color: rgb(21, 32, 44);
 }
-/* .input-btn {
-  min-height: 200px;
-} */
+
+.color-white {
+  color: white;
+}
+
+.min-height {
+  min-height: 91.2vh;
+}

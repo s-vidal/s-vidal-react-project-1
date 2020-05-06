@@ -1,0 +1,30 @@
+.custom-list {
+  padding: 0;
+  list-style: none;
+}
+
+.li-item-border {
+  color: white;
+  padding: 15px;
+  margin: 15px 0 15px 0;
+  border-radius: 6px;
+  background-color: #343a40;
+}
+
+.tweet-info-name,
+.tweet-info-date {
+  color: #6c757d;
+  font-size: 12px;
+}
+
+.tweet-info-name {
+  text-align: left;
+}
+
+.tweet-info-date {
+  text-align: right;
+}
+
+.tweet-text {
+  text-align: left;
+}

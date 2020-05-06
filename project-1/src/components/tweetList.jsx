@@ -1,21 +1,27 @@
 import React from "react";
+import "./tweetList.css";
 
 const TweetList = (props) => {
   const {tweetsList} = props;
-  let tweetListValues = Object.values(tweetsList);
-  let TweetsArray = tweetListValues.map((value) => JSON.parse(value));
-  let sortedTweetsArray = TweetsArray.sort((a, b) => b.timeStamp - a.timeStamp);
-  let userName = "Yonatan";
-
   return (
     <div>
-      <ul className="list-group">
-        {sortedTweetsArray &&
-          sortedTweetsArray.map((tweet) => (
-            <li className="list-group-item" key={tweet.time}>
-              <span className="mr-5">{userName}</span>
-              <span>{tweet.inputText}</span>
-              <span className="ml-5">{tweet.time}</span>
+      <ul className="custom-list">
+        {tweetsList &&
+          tweetsList.map((tweet) => (
+            <li className="li-item-border" key={tweet.date}>
+              <div className="container">
+                <div className="row">
+                  <div className="col-4">
+                    <p className="tweet-info-name">{tweet.userName}</p>
+                  </div>
+                  <div className="col-8">
+                    <p className="tweet-info-date">{tweet.date}</p>
+                  </div>
+                </div>
+                <div>
+                  <p className="tweet-text">{tweet.content}</p>
+                </div>
+              </div>
             </li>
           ))}
       </ul>
